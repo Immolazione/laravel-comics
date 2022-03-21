@@ -2,10 +2,43 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: $segoe;
-}
-.container {
+  }
+
+  .container {
     width: 1200px;
     margin: 0 auto;
-}
+    padding: 20px 0;
+  }
 
+  .container-sm{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  .active {
+     color: $c-blue;
+  }
+  
+  body {
+    height: 100vh;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .wrapper {
+    height: 100vh;
+  }
+  
+  button {
+    font-size: 18px;
+    border: 0;
+    background-color: $c-blue;
+    padding: 15px 20px;
+    color: $c-white;
+    font-weight: bold;
+    cursor: pointer;
+  }

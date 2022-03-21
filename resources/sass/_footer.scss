@@ -1,63 +1,83 @@
-
-#footer-links {
-    background-image: asset('images/footer-bg.jpg');
-    height: 30rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.footer-cols {
+.footer-top {
     display: flex;
-    justify-content: space-between;
-    img {
-    position: relative;
-    bottom: 2rem;
+    align-items: center;
+    height: 600px;
+    color: $c-white;
+    background-image: url("../images/footer-bg.jpg");
+    background-position: contain;
+  
+    max-height: 350px;
+    .container{
+      height: 100%;
+      padding: 0;
     }
-}
-
-.footer-lists {
+  }
+  
+  #links {
+    width: 50%;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    color: white;
-    margin-top: 5rem;
-    ul {
-        list-style-type: none;
-        li a {
-        text-decoration: none;
-        color: grey;
-        }
+    align-items: center;
+    h3 {
+      padding: 0 0 10px 10px;
     }
-}
+    ul {
+      margin: 0 10px;
+      list-style-type: none;
+      align-content: space-around;
+      li {
+        color: grey;
+      }
+    }
+  }
+  
+  .logo {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+      img {
+        position: absolute;
+        right: 0;
+        bottom: -80px;
+        width: 90%;
+      }
+  }
 
-#sign-and-follow {
-    height: 5rem;
-    background-color: #303030;
+  .footer-bottom {
     display: flex;
     align-items: center;
     position: relative;
+    height: 150px;
+    background-color: $c-grey;
     z-index: 1;
-    .sign-up {
-    background-color: #303030;
-    color: white;
-    border: 2px solid $main-color;
-    padding: 0.8rem;
-    }
-}
-
-#sign-and-follow-cols {
+  }
+  
+  #button {
     display: flex;
-    justify-content: space-between;
-        .socials {
-        display: flex;
-        flex-grow: 1;
-        justify-content: flex-end;
-        align-items: center;
-        * {
-            margin-left: 1rem;
-        }
-        h2 {
-            color: #0282F9;
-        }
+    width: 70%;
+    button {
+       background-color: $c-grey;
+       padding: 10px;
+       border: 2px solid $c-blue;
+       a{
+          color: $c-white;
+          text-decoration: none;
+       }
     }
-}
+  }
+  
+  #social{
+     display: flex;
+     align-items: center;
+     ul{
+        display: flex;
+        li{
+           list-style-type: none;
+           margin: 5px;
+        }
+     }
+     h4{
+        margin-right: 20px;
+        color: $c-blue;
+     }
+  }

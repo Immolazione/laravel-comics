@@ -2,180 +2,383 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", "Open Sans", Helvetica, sans-serif;
 }
 
 .container {
   width: 1200px;
   margin: 0 auto;
+  padding: 20px 0;
 }
 
-#header-navbar {
+.container-sm {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.active {
+  color: #0377f8;
+}
+
+body {
+  height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+button {
+  font-size: 18px;
+  border: 0;
+  background-color: #0377f8;
+  padding: 15px 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#base-card {
+  height: 100px;
+  background-color: #0377f8;
+}
+#base-card .container-sm {
+  position: relative;
+  height: 100%;
+}
+#base-card .container-sm figure {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  border: 1px solid white;
+}
+#base-card .container-sm figure .banner {
+  height: 20px;
+  background-color: #78BCDF;
+  position: absolute;
+  color: white;
+  text-align: center;
+}
+#base-card .container-sm figure #banner-bottom {
+  bottom: 0px;
+  width: 100%;
+}
+#base-card .container-sm figure #banner-top {
+  font-size: 14px;
+  top: 0px;
+  width: 50%;
+}
+
+.container-sm {
+  display: flex;
+}
+
+.information {
+  position: relative;
+  display: flex;
+  padding: 50px 0;
+}
+
+#description {
+  padding: 0 20px;
+  width: 70%;
+}
+#description h2 {
+  color: #003753;
+  font-size: 25px;
+}
+#description #row {
+  padding: 0 20px;
+  margin: 25px 0;
+  height: 50px;
+  background-color: #4BB14F;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 8rem;
+  color: white;
 }
-#header-navbar img {
-  width: 5rem;
+#description #row #wrapper {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: space-between;
+  height: 100%;
+}
+#description #row #price {
+  display: flex;
+}
+#description #row #price #local {
+  color: #B1FA86;
+}
+#description #row #price #disponibility {
+  color: #B1FA86;
+}
+#description .plot {
+  font-size: 18px;
 }
 
-ul {
+#advertisement {
+  width: 30%;
+}
+
+#info {
+  background-color: #F5F5F5;
   display: flex;
+}
+
+#talent {
+  width: 50%;
+  padding-right: 20px;
+}
+#talent .row {
+  display: flex;
+  flex-direction: column;
+}
+#talent .row .col {
+  padding: 10px;
+  display: flex;
+}
+#talent .row .col.title {
+  color: #003753;
+}
+#talent .row .col #first {
+  width: 40%;
+}
+#talent .row .col #second {
+  width: 60%;
+}
+
+#specs {
+  width: 50%;
+  padding-left: 20px;
+}
+#specs .row {
+  display: flex;
+  flex-direction: column;
+}
+#specs .row .col {
+  padding: 10px;
+  display: flex;
+}
+#specs .row .col.title {
+  color: #003753;
+}
+#specs .row .col #first {
+  width: 40%;
+}
+#specs .row .col #second {
+  width: 60%;
+}
+
+#banner {
+  height: 30px;
+  background-color: #0377f8;
+}
+#banner .container {
+  font-size: 13px;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  color: white;
+}
+#banner .container .banner {
+  padding-left: 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+}
+nav ul {
+  display: flex;
+  height: 100%;
+}
+nav ul li {
   list-style-type: none;
-}
-ul li {
-  padding: 0 0.8rem;
-}
-ul li a {
-  color: #000;
-  text-decoration: none;
-  font-size: 0.8rem;
-}
-
-#jumbotron {
-  background-image: url(../assets/img/jumbotron.jpg);
-  height: 25rem;
-}
-
-#current-series {
-  color: #fff;
-  padding: 1rem;
-  background-color: #0282F9;
-  display: inline-block;
-  position: relative;
-  bottom: 1.5rem;
-}
-
-.card-box {
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+}
+nav ul li a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  margin: 5px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+nav ul li a:hover, nav ul li a.active {
+  color: #0377f8;
 }
 
-.card {
-  margin: 0 2rem;
+.jumbotron {
+  height: 400px;
 }
-.card img {
+.jumbotron img {
+  height: 400px;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
-  height: 10rem;
-  width: 10rem;
 }
-.card div {
-  color: #fff;
-  text-transform: uppercase;
-  max-width: 10rem;
-  font-size: 0.8rem;
-  margin-bottom: 1rem;
-}
-
-.load-more {
-  display: flex;
-  justify-content: center;
-}
-.load-more button {
-  background-color: #0282F9;
-  border: 0;
-  color: #fff;
-  padding: 1rem 2rem;
-  margin: 2rem;
-}
-
-#content {
-  background-color: #000;
-}
-
-#services-section {
-  background-color: #0282F9;
-}
-
-.services {
-  height: 10rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.service {
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.service img {
-  margin-right: 1rem;
-  height: 3rem;
-}
-.service h1 {
-  font-size: 1rem;
-}
-
-.container > h1 {
-  color: #fff;
-  line-height: 8rem;
-}
-
-#footer-links {
-  background-image: url("../assets/img/footer-bg.jpg");
-  height: 30rem;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.footer-cols {
-  display: flex;
-  justify-content: space-between;
-}
-.footer-cols img {
+.jumbotron .container {
   position: relative;
-  bottom: 2rem;
+}
+.jumbotron .container button {
+  position: absolute;
+  bottom: -30px;
+  left: 0%;
 }
 
-.footer-lists {
+.main-series {
+  background-color: black;
+  padding: 20px 0;
+}
+.main-series .load {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+.main-series .load button {
+  font-size: 12px;
+  padding: 10px 40px;
+}
+
+.container {
+  display: flex;
   flex-wrap: wrap;
+}
+
+h2 {
   color: white;
-  margin-top: 5rem;
 }
-.footer-lists ul {
+
+#shop {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 20px 0;
+  background-color: #0377f8;
+}
+#shop .immagine {
+  width: 40%;
+}
+
+.card-img {
+  display: flex;
+}
+.card-img figure {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+.card-img figure .immagine {
+  display: flex;
+  align-items: center;
+}
+.card-img figure .text {
+  font-size: 15px;
+}
+
+.card-serie {
+  flex-basis: 16.6666666667%;
+  color: white;
+  padding: 20px;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  height: 600px;
+  color: white;
+  background-image: url("../images/footer-bg.jpg");
+  background-position: contain;
+  max-height: 350px;
+}
+.footer-top .container {
+  height: 100%;
+  padding: 0;
+}
+
+#links {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#links h3 {
+  padding: 0 0 10px 10px;
+}
+#links ul {
+  margin: 0 10px;
   list-style-type: none;
+  align-content: space-around;
 }
-.footer-lists ul li a {
-  text-decoration: none;
+#links ul li {
   color: grey;
 }
 
-#sign-and-follow {
-  height: 5rem;
-  background-color: #303030;
+.logo {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+}
+.logo img {
+  position: absolute;
+  right: 0;
+  bottom: -80px;
+  width: 90%;
+}
+
+.footer-bottom {
   display: flex;
   align-items: center;
   position: relative;
+  height: 150px;
+  background-color: #2a2a2a;
   z-index: 1;
 }
-#sign-and-follow .sign-up {
-  background-color: #303030;
+
+#button {
+  display: flex;
+  width: 70%;
+}
+#button button {
+  background-color: #2a2a2a;
+  padding: 10px;
+  border: 2px solid #0377f8;
+}
+#button button a {
   color: white;
-  border: 2px solid #0282F9;
-  padding: 0.8rem;
+  text-decoration: none;
 }
 
-#sign-and-follow-cols {
+#social {
   display: flex;
-  justify-content: space-between;
-}
-#sign-and-follow-cols .socials {
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-end;
   align-items: center;
 }
-#sign-and-follow-cols .socials * {
-  margin-left: 1rem;
+#social ul {
+  display: flex;
 }
-#sign-and-follow-cols .socials h2 {
-  color: #0282F9;
+#social ul li {
+  list-style-type: none;
+  margin: 5px;
+}
+#social h4 {
+  margin-right: 20px;
+  color: #0377f8;
 }
