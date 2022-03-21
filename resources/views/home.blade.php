@@ -1,84 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div id="header-navbar">
-              <img src="" alt="Logo DC">
-              <nav>
-                <ul>
-                  <li><a href="">AA</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-    </header>
-    <main>
-            <section id="jumbotron">
-            </section>
-            <section id="content">
-                <div class="container">
-                    <div id="current-series">CURRENT SERIES</div>
-                    <div class="card-box">
-                        <div class="card">
-                            <img src="" alt="">
-                            <div>AA</div>
-                        </div>
-                    </div>
-                    <div class="load-more">
-                        <button type="button">LOAD MORE</button>
-                    </div>
+@php
+    $sales = config('sales');
+ @endphp
+
+@extends('layout.main')
+
+@section('content')
+
+<!-- Jumbotron  -->
+<div class="jumbotron">
+    <figure>
+        <img src="{{ asset('images/jumbotron.jpg') }}" alt="logo jumbotron">
+    </figure>
+</div>
+
+<!-- Section Main-Series  -->
+<div class="main-series">
+    <div class="container">
+        @foreach($books as $id => $book)
+        <div class="card-serie">
+            <a href="{{ route('comic', ['id' => $id]) }}"><img src="{{ $book['thumb'] }}" alt="serie.type" /></a> 
+            <h5> {{ $book['title'] }}</h5>
+        </div>
+        @endforeach
+        <div class="load"><button>LOAD MORE</button></div>
+    </div>
+</div>
+
+<section id="shop">
+    <div class="container">
+         <div class="card-img">
+            @foreach($sales as $sale)
+            <figure>
+                <div class="immagine">
+                    <img src="{{ asset("images$sale[url]") }}" alt="{{$sale['description']}}" />
                 </div>
-            </section>
-            <section id="services-section">
-                <div class="container">
-                    <div class="services">
-                        <div class="service">
-                            <img src="" alt="">
-                            <h1>AA</h1>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    </main>
-    <footer>
-        <section id="footer-links">
-            <div class="container">
-                <div class="footer-cols">
-                    <div class="footer-lists">
-                        <h2>AA</h2>
-                        <ul>
-                            <li>
-                                <a href="subtitle.url">AA</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <img src="../assets/img/dc-logo-bg.png" alt="DC Logo">
-                </div>
-            </div>
-        </section>
-        <section id="sign-and-follow">
-            <div class="container">
-                <div id="sign-and-follow-cols">
-                    <button type="button" class="sign-up">SIGN-UP NOW!</button>
-                    <div class="socials">
-                        <h2>FOLLOW US</h2>
-                        <img src="" alt="Follow">
-                        <img src="" alt="Follow">
-                        <img src="" alt="Follow">
-                        <img src="" alt="Follow">
-                        <img src="" alt="Follow">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </footer>
-</body>
-</html>
+                <div class="text">{{$sale['text']}}</div>
+            </figure>
+            @endforeach
+        </div> 
+    </div>
+</section>
+
+@endsection
